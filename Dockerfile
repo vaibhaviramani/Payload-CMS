@@ -5,15 +5,15 @@ RUN mkdir -p /app
 WORKDIR /app
 
 COPY package.json  .
-COPY package-lock.json .
+COPY yarn.lock .
 
 RUN apk add git
 
-RUN npm install
+RUN yarn install
 
 COPY . .
 
-RUN npm build
+RUN yarn build
 
 EXPOSE 4000
-CMD [ "npm", "run", "serve" ]
+CMD [ "yarn", "run", "serve" ]
