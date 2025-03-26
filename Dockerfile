@@ -15,10 +15,9 @@ ENV NODE_ENV=production
 
 WORKDIR /home/node/app
 COPY package*.json  ./
-COPY yarn.lock ./
 
 RUN yarn install --production
 
-EXPOSE 3000
+EXPOSE 4000
 
 CMD ["node", "dist/server.js"]
