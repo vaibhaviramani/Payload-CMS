@@ -6,7 +6,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 WORKDIR /app
 
 # Copy the .npmrc file if you're using one for private registries or custom configs
-COPY .npmrc ./
+# COPY .npmrc ./
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
